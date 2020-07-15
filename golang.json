@@ -22,6 +22,9 @@
       "managers": ["gomod"],
       "packagePatterns": [".*"],
       "updateTypes": ["minor", "patch", "pin"],
+      "postUpdateOptions": [
+        "gomodTidy"
+      ],
       "automerge": true
     }
   ]

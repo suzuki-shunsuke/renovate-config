@@ -1,7 +1,4 @@
 {
-  "extends": [
-    "config:base"
-  ],
   "packageRules": [
     {
       "packageNames": ["golang"],
@@ -20,11 +17,11 @@
     },
     {
       "managers": ["gomod"],
-      "packagePatterns": [".*"],
+      "postUpdateOptions": ["gomodTidy"]
+    },
+    {
+      "managers": ["gomod"],
       "updateTypes": ["minor", "patch", "pin"],
-      "postUpdateOptions": [
-        "gomodTidy"
-      ],
       "automerge": true
     }
   ]

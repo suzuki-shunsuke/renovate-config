@@ -1,28 +1,25 @@
 {
   "packageRules": [
     {
-      "packageNames": ["golang"],
-      "updateTypes": ["minor", "patch", "pin"],
-      "automerge": true
+      "automerge": true,
+      "matchPackageNames": ["golang"],
+      "matchUpdateTypes": ["minor", "patch", "pin"]
     },
     {
-      "packageNames": ["golangci/golangci-lint"],
-      "updateTypes": ["minor", "patch", "pin"],
-      "automerge": true
+      "automerge": true,
+      "matchPackageNames": ["golangci/golangci-lint"],
+      "matchUpdateTypes": ["minor", "patch", "pin"]
     },
     {
-      "packageNames": ["goreleaser/goreleaser"],
-      "updateTypes": ["minor", "patch", "pin"],
-      "automerge": true
+      "automerge": true,
+      "matchPackageNames": ["goreleaser/goreleaser"],
+      "matchUpdateTypes": ["minor", "patch", "pin"]
     },
+    {"postUpdateOptions": ["gomodTidy"], "matchManagers": ["gomod"]},
     {
-      "managers": ["gomod"],
-      "postUpdateOptions": ["gomodTidy"]
-    },
-    {
-      "managers": ["gomod"],
-      "updateTypes": ["minor", "patch", "pin"],
-      "automerge": true
+      "automerge": true,
+      "matchManagers": ["gomod"],
+      "matchUpdateTypes": ["minor", "patch", "pin"]
     }
   ]
 }

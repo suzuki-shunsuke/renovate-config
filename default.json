@@ -1,0 +1,12 @@
+{
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "packageRules": [
+    {
+      "postUpdateOptions": ["gomodTidy"],
+      "matchManagers": ["gomod"]
+    }
+  ]
+}

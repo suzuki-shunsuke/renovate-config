@@ -1,14 +1,4 @@
 {
-  "automerge": true,
-  "major": {
-    "automerge": false
-  },
-  "packageRules": [
-    {
-      "postUpdateOptions": ["gomodTidy"],
-      "matchManagers": ["gomod"]
-    }
-  ],
   "regexManagers": [
     {
       "fileMatch": [".*/\\.tflint\\.hcl$", "^\\.tflint\\.hcl$"],

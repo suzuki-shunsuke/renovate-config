@@ -5,13 +5,41 @@
 
 [Renovate's Shareable Config Presets](https://docs.renovatebot.com/config-presets/)
 
-## How to use
+## Presets
+
+* [default](default.json)
+* [golang](golang.json) - go mod tidy
+* [tflint](tflint.json) - tflint ruleset plugin
+
+## default
 
 ```json
 {
   "extends": [
-    "github>suzuki-shunsuke/renovate-config:golang"
+    "github>suzuki-shunsuke/renovate-config#0.1.2"
   ]
+}
+```
+
+## tflint
+
+```json
+{
+  "extends": [
+    "github>suzuki-shunsuke/renovate-config:tflint#0.1.2"
+  ]
+}
+```
+
+Add annotation `# renovate: depName=<plugin full name>` to .tflint.hcl
+
+e.g.
+
+```hcl
+plugin "aws" {
+  enabled = true
+  version = "0.7.0" # renovate: depName=terraform-linters/tflint-ruleset-aws
+  source  = "github.com/terraform-linters/tflint-ruleset-aws"
 }
 ```
 

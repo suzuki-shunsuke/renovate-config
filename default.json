@@ -22,6 +22,22 @@
       ],
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "fileMatch": [
+        "^renovate\\.json5?$",
+        "^\\.github/renovate\\.json5?$",
+        "^\\.gitlab/renovate\\.json5?$",
+        "^\\.renovaterc\\.json$",
+        "^\\.renovaterc$"
+      ],
+      "matchStrings": [
+        "\"github>suzuki-shunsuke/renovate-config#(?<currentValue>[^\" \\n\\(]+)",
+        "\"github>suzuki-shunsuke/renovate-config:.*#(?<currentValue>[^\" \\n\\(]+)",
+        "\"github>suzuki-shunsuke/renovate-config/.*#(?<currentValue>[^\" \\n\\(]+)"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "suzuki-shunsuke/renovate-config"
     }
   ]
 }

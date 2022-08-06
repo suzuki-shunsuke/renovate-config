@@ -7,6 +7,10 @@
     {
       "postUpdateOptions": ["gomodTidy"],
       "matchManagers": ["gomod"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "versioning": "semver"
     }
   ],
   "regexManagers": [

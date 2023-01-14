@@ -1,8 +1,10 @@
 {
-  "packageRules": [
-    {
-      "matchManagers": ["github-actions"],
-      "versioning": "semver"
-    }
-  ]
+   "packageRules": [
+      {
+         "matchManagers": [
+            "github-actions"
+         ],
+         "versioning": "semver"
+      }
+   ]
 }

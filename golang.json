@@ -1,8 +1,12 @@
 {
-  "packageRules": [
-    {
-      "postUpdateOptions": ["gomodTidy"],
-      "matchManagers": ["gomod"]
-    }
-  ]
+   "packageRules": [
+      {
+         "matchManagers": [
+            "gomod"
+         ],
+         "postUpdateOptions": [
+            "gomodTidy"
+         ]
+      }
+   ]
 }

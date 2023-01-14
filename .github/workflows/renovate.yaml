@@ -14,7 +14,10 @@ jobs:
         with:
           aqua_version: v1.30.2
       - run: |
-          eval "$(ci-info run)"
+          ci-info run | sed "s/^export //" >> "$GITHUB_ENV"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - run: |
           while read -r file; do
             RENOVATE_CONFIG_FILE="$file" npx --package renovate -c renovate-config-validator
           done < $(grep -E "^[^/]+\.json$" "$CI_INFO_TEMP_DIR/pr_all_filenames.txt")

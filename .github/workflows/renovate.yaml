@@ -13,11 +13,10 @@ jobs:
       - uses: aquaproj/aqua-installer@61e2563dfe7674cbf74fe6ec212e444198a3bb00 # v2.0.2
         with:
           aqua_version: v1.30.2
-      - run: |
-          ci-info run | sed "s/^export //" >> "$GITHUB_ENV"
+      - run: ci-info run | sed "s/^export //" >> "$GITHUB_ENV"
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - run: |
-          while read -r file; do
+          grep -E "^[^/]+\.json$" "$CI_INFO_TEMP_DIR/pr_all_filenames.txt" | while read -r file; do
             RENOVATE_CONFIG_FILE="$file" npx --package renovate -c renovate-config-validator
-          done < $(grep -E "^[^/]+\.json$" "$CI_INFO_TEMP_DIR/pr_all_filenames.txt")
+          done

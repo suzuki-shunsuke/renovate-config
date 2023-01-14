@@ -6,7 +6,11 @@ local slsaGitHubGenerator = import 'slsa-github-generator.jsonnet';
 local actionSemver = import 'action-semver.jsonnet';
 local disableDigest = import 'disable-digest.jsonnet';
 
-automerge + golang + {
+{
+  extends: [
+    "helpers:pinGitHubActionDigests",
+  ],
+} + automerge + golang + {
   packageRules: slsaGitHubGenerator.packageRules + golang.packageRules + actionSemver.packageRules + disableDigest.packageRules,
   regexManagers: tflint.regexManagers + renovatePreset.regexManagers,
 }

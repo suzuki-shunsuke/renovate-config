@@ -1,0 +1,10 @@
+{
+   "packageRules": [
+      {
+         "enabled": false,
+         "matchUpdateTypes": [
+            "digest"
+         ]
+      }
+   ]
+}

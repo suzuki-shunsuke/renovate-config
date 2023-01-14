@@ -1,0 +1,13 @@
+{
+   "packageRules": [
+      {
+         "matchDepTypes": [
+            "action"
+         ],
+         "matchPackageNames": [
+            "slsa-framework/slsa-github-generator"
+         ],
+         "pinDigests": false
+      }
+   ]
+}

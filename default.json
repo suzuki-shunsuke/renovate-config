@@ -1,5 +1,8 @@
 {
    "automerge": true,
+   "extends": [
+      "helpers:pinGitHubActionDigests"
+   ],
    "major": {
       "automerge": false
    },

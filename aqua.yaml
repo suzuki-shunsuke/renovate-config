@@ -7,4 +7,4 @@ registries:
 packages:
 - name: rhysd/actionlint@v1.6.22
 - name: google/go-jsonnet@v0.19.1
-- name: suzuki-shunsuke/ci-info@v2.1.1
+- name: suzuki-shunsuke/ci-info@v2.1.2

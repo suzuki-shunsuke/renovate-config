@@ -18,5 +18,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
       - run: |
           grep -E "^[^/]+\.json$" "$CI_INFO_TEMP_DIR/pr_all_filenames.txt" | while read -r file; do
-            RENOVATE_CONFIG_FILE="$file" npx --package renovate -c renovate-config-validator
+            if [ -f "$file" ]; then
+              RENOVATE_CONFIG_FILE="$file" npx --package renovate -c renovate-config-validator
+            fi
           done

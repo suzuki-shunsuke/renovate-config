@@ -10,7 +10,7 @@ local disableDigest = import 'disable-digest.jsonnet';
   extends: [
     "helpers:pinGitHubActionDigests",
   ],
-} + automerge + golang + {
+} + automerge + {
   packageRules: slsaGitHubGenerator.packageRules + golang.packageRules + actionSemver.packageRules + disableDigest.packageRules,
   regexManagers: tflint.regexManagers + renovatePreset.regexManagers,
 }

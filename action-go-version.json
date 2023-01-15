@@ -1,0 +1,18 @@
+{
+   "regexManagers": [
+      {
+         "datasourceTemplate": "github-tags",
+         "depNameTemplate": "golang/go",
+         "extractVersionTemplate": "^go(?<version>.*)$",
+         "fileMatch": [
+            "^\\.github/workflows/.*\\.ya?ml$",
+            "^\\.github/actions/.*\\.ya?ml$"
+         ],
+         "matchStrings": [
+            "go-version: (?<currentValue>.*)",
+            "go-version: '(?<currentValue>.*)'",
+            "go-version: \"(?<currentValue>.*)\""
+         ]
+      }
+   ]
+}

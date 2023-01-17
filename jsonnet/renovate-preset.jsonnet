@@ -9,9 +9,7 @@
         "^\\.renovaterc$",
       ],
       matchStrings: [
-        "\"github>(?<depName>.*?)#(?<currentValue>[^\" \\n\\(]+)",
-        "\"github>(?<depName>.*?):.*#(?<currentValue>[^\" \\n\\(]+)",
-        "\"github>(?<depName>.*?)/.*#(?<currentValue>[^\" \\n\\(]+)"
+        "\"github>(?<depName>(?<packageName>[^/:# \\n]+/[^/:# \\n]+)[^#() \\n]*)#(?<currentValue>[^\" \\n\\(]+)",
       ],
       datasourceTemplate: "github-releases",
     },

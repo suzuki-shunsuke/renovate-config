@@ -37,7 +37,6 @@
          ]
       }
    ],
-   "platformAutomerge": true,
    "regexManagers": [
       {
          "datasourceTemplate": "github-releases",

@@ -2,6 +2,5 @@
    "automerge": true,
    "major": {
       "automerge": false
-   },
-   "platformAutomerge": true
+   }
 }

@@ -63,5 +63,6 @@
             "\"github>(?<depName>(?<packageName>[^/:# \\n]+/[^/:# \\n]+)[^#() \\n]*)#(?<currentValue>[^\" \\n\\(]+)"
          ]
       }
-   ]
+   ],
+   "stabilityDays": 2
 }

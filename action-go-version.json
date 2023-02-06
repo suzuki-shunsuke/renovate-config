@@ -12,7 +12,8 @@
             "go-version: (?<currentValue>.*)",
             "go-version: '(?<currentValue>.*)'",
             "go-version: \"(?<currentValue>.*)\""
-         ]
+         ],
+         "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.?(?<patch>\\d+)?$"
       }
    ]
 }

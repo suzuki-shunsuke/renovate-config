@@ -18,14 +18,6 @@
       },
       {
          "matchManagers": [
-            "gomod"
-         ],
-         "postUpdateOptions": [
-            "gomodTidy"
-         ]
-      },
-      {
-         "matchManagers": [
             "github-actions"
          ],
          "versioning": "semver"

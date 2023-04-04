@@ -5,6 +5,6 @@ registries:
 - type: standard
   ref: v3.149.1 # renovate: depName=aquaproj/aqua-registry
 packages:
-- name: rhysd/actionlint@v1.6.23
+- name: rhysd/actionlint@v1.6.24
 - name: google/go-jsonnet@v0.19.1
 - name: suzuki-shunsuke/ci-info@v2.1.2

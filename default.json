@@ -27,6 +27,14 @@
          "matchUpdateTypes": [
             "digest"
          ]
+      },
+      {
+         "matchDatasources": [
+            "go"
+         ],
+         "postUpdateOptions": [
+            "gomodUpdateImportPaths"
+         ]
       }
    ],
    "regexManagers": [

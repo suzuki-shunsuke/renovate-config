@@ -3,6 +3,9 @@
    "extends": [
       "helpers:pinGitHubActionDigests"
    ],
+   "lockFileMaintenance": {
+      "enabled": true
+   },
    "major": {
       "automerge": false
    },

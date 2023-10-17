@@ -9,6 +9,9 @@ local tflint = import 'tflint.jsonnet';
   extends: [
     'helpers:pinGitHubActionDigests',
   ],
+  lockFileMaintenance: {
+    enabled: true,
+  },
 } + automerge + {
   packageRules: slsaGitHubGenerator.packageRules + actionSemver.packageRules + disableDigest.packageRules + [
     {

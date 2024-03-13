@@ -12,6 +12,7 @@ local tflint = import 'tflint.jsonnet';
   lockFileMaintenance: {
     enabled: true,
   },
+  configMigration: true,
 } + automerge + {
   packageRules: slsaGitHubGenerator.packageRules + actionSemver.packageRules + disableDigest.packageRules + [
     {

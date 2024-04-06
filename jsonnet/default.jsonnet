@@ -7,7 +7,7 @@ local tflint = import 'tflint.jsonnet';
 
 {
   extends: [
-    'helpers:pinGitHubActionDigests',
+    'config:best-practices',
   ],
   lockFileMaintenance: {
     enabled: true,

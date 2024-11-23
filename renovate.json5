@@ -2,6 +2,6 @@
   extends: [
     "config:recommended",
     "github>suzuki-shunsuke/renovate-config",
-    "github>aquaproj/aqua-renovate-config#2.4.0"
+    "github>aquaproj/aqua-renovate-config#2.5.0"
   ],
 }

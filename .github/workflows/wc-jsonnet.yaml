@@ -1,11 +1,9 @@
 ---
 name: jsonnet
 permissions: {}
-on:
-  pull_request:
-    branches: [main]
+on: workflow_call
 jobs:
-  default:
+  jsonnet:
     timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:

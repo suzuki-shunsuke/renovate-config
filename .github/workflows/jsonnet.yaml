@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  default:
+  jsonnet:
     timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:

@@ -42,6 +42,7 @@ jobs:
       - renovate-config-validator
       - ghalint
       - validate
+      - jsonnet
     permissions: {}
     if: failure()
     steps:
@@ -71,6 +72,11 @@ jobs:
     permissions: {}
 
   validate:
-    uses: ./.github/workflows/renovate.yaml
+    uses: ./.github/workflows/wc-renovate.yaml
+    permissions:
+      contents: write
+
+  jsonnet:
+    uses: ./.github/workflows/wc-jsonnet.yaml
     permissions:
       contents: write

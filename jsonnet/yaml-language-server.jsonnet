@@ -1,0 +1,14 @@
+{
+  customManagers: [
+      {
+         customType: "regex",
+         datasourceTemplate: "github-releases",
+         fileMatch: [
+            "\\.ya?ml$"
+         ],
+         matchStrings: [
+            "# yaml-language-server: \\$schema=https://raw\\.githubusercontent\\.com/(?<packageName>[^/:# \\n]+/[^/:# \\n]+)/(?<currentValue>[^/\" \\n\\(]+)/.*\\.json",
+         ],
+      } 
+  ]
+}

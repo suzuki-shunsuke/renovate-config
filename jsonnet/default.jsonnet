@@ -3,7 +3,7 @@ local automerge = import 'automerge.jsonnet';
 local disableDigest = import 'disable-digest.jsonnet';
 local renovatePreset = import 'renovate-preset.jsonnet';
 local slsaGitHubGenerator = import 'slsa-github-generator.jsonnet';
-local tflint = import 'tflint.jsonnet';
+local yamlLangServer = import 'yaml-language-server.jsonnet';
 
 {
   extends: [
@@ -24,5 +24,5 @@ local tflint = import 'tflint.jsonnet';
       ],
     },
   ],
-  regexManagers: tflint.regexManagers + renovatePreset.regexManagers,
+  customManagers: renovatePreset.customManagers + yamlLangServer.customManagers,
 }

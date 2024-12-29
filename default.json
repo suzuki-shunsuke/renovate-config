@@ -1,6 +1,32 @@
 {
    "automerge": true,
    "configMigration": true,
+   "customManagers": [
+      {
+         "customType": "regex",
+         "datasourceTemplate": "github-releases",
+         "fileMatch": [
+            "^renovate\\.json5?$",
+            "^\\.github/renovate\\.json5?$",
+            "^\\.gitlab/renovate\\.json5?$",
+            "^\\.renovaterc\\.json$",
+            "^\\.renovaterc$"
+         ],
+         "matchStrings": [
+            "\"github>(?<depName>(?<packageName>[^/:# \\n]+/[^/:# \\n]+)[^#() \\n]*)#(?<currentValue>[^\" \\n\\(]+)"
+         ]
+      },
+      {
+         "customType": "regex",
+         "datasourceTemplate": "github-releases",
+         "fileMatch": [
+            "\\.ya?ml$"
+         ],
+         "matchStrings": [
+            "# yaml-language-server: \\$schema=https://raw\\.githubusercontent\\.com/(?<packageName>[^/:# \\n]+/[^/:# \\n]+)/(?<currentValue>[^/\" \\n\\(]+)/.*\\.json"
+         ]
+      }
+   ],
    "extends": [
       "config:best-practices"
    ],
@@ -41,32 +67,5 @@
          ]
       }
    ],
-   "platformAutomerge": true,
-   "regexManagers": [
-      {
-         "datasourceTemplate": "github-releases",
-         "extractVersionTemplate": "^v(?<version>.*)$",
-         "fileMatch": [
-            ".*/\\.tflint\\.hcl$",
-            "^\\.tflint\\.hcl$"
-         ],
-         "matchStrings": [
-            "\"(?<currentValue>[^ '\"]+?)\" +# renovate: depName=(?<depName>.*?)\\n",
-            "'(?<currentValue>[^ '\"]+?)' +# renovate: depName=(?<depName>.*?)\\n"
-         ]
-      },
-      {
-         "datasourceTemplate": "github-releases",
-         "fileMatch": [
-            "^renovate\\.json5?$",
-            "^\\.github/renovate\\.json5?$",
-            "^\\.gitlab/renovate\\.json5?$",
-            "^\\.renovaterc\\.json$",
-            "^\\.renovaterc$"
-         ],
-         "matchStrings": [
-            "\"github>(?<depName>(?<packageName>[^/:# \\n]+/[^/:# \\n]+)[^#() \\n]*)#(?<currentValue>[^\" \\n\\(]+)"
-         ]
-      }
-   ]
+   "platformAutomerge": true
 }

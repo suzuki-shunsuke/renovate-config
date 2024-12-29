@@ -1,6 +1,7 @@
 {
-  regexManagers: [
+  customManagers: [
     {
+      customType: "regex",
       fileMatch: [
         "^\\.github/workflows/.*\\.ya?ml$",
         "^\\.github/actions/.*\\.ya?ml$",

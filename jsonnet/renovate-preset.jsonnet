@@ -1,6 +1,7 @@
 {
-  regexManagers: [
+  customManagers: [
     {
+      customType: "regex",
       fileMatch: [
         "^renovate\\.json5?$",
         "^\\.github/renovate\\.json5?$",

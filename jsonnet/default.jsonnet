@@ -23,6 +23,10 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
         'gomodUpdateImportPaths',
       ],
     },
+    {
+      matchDepNames: ['suzuki-shunsuke/renovate-config'],
+      groupName: 'suzuki-shunsuke/renovate-config',
+    },
   ],
   customManagers: renovatePreset.customManagers + yamlLangServer.customManagers,
 }

@@ -65,6 +65,12 @@
          "postUpdateOptions": [
             "gomodUpdateImportPaths"
          ]
+      },
+      {
+         "groupName": "suzuki-shunsuke/renovate-config",
+         "matchDepNames": [
+            "suzuki-shunsuke/renovate-config"
+         ]
       }
    ],
    "platformAutomerge": true

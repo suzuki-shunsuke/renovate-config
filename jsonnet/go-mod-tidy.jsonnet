@@ -1,8 +1,8 @@
 {
   packageRules: [
     {
-      postUpdateOptions: ["gomodTidy"],
-      matchManagers: ["gomod"],
-    }
-  ]
+      postUpdateOptions: ['gomodTidy'],
+      matchManagers: ['gomod'],
+    },
+  ],
 }

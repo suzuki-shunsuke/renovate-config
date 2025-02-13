@@ -4,8 +4,8 @@
   // So we change the versioning of github-actions manager to "semver".
   packageRules: [
     {
-      matchManagers: ["github-actions"],
-      versioning: "semver",
+      matchManagers: ['github-actions'],
+      versioning: 'semver',
     },
   ],
 }

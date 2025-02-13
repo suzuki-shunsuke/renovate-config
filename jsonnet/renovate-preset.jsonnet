@@ -12,8 +12,7 @@
       matchStrings: [
         // "github>aquaproj/aqua-renovate-config:file#2.2.1(aqua/.*\\.ya?ml)"
         // 'github>aquaproj/aqua-renovate-config:file#2.2.1(aqua/.*\\.ya?ml)'
-        '"github>(?<depName>(?<packageName>[^/:# \\n]+/[^/:# \\n]+)[^#() \\n]*)#(?<currentValue>[^" \\n\\(]+)',
-        '\'github>(?<depName>(?<packageName>[^/:# \\n]+/[^/:# \\n]+)[^#() \\n]*)#(?<currentValue>[^\" \\n\\(]+)',
+        '[\'"]github>(?<depName>(?<packageName>[^/:# \\n]+/[^/:# \\n]+)[^#() \\n]*)#(?<currentValue>[^"\' \\n\\(]+)',
       ],
       datasourceTemplate: 'github-releases',
     },

@@ -24,7 +24,7 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
       ],
     },
     {
-      matchDepNames: ['suzuki-shunsuke/renovate-config'],
+      matchPackageNames: ['suzuki-shunsuke/renovate-config'],
       groupName: 'suzuki-shunsuke/renovate-config',
     },
   ],

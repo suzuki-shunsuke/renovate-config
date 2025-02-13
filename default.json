@@ -68,7 +68,7 @@
       },
       {
          "groupName": "suzuki-shunsuke/renovate-config",
-         "matchDepNames": [
+         "matchPackageNames": [
             "suzuki-shunsuke/renovate-config"
          ]
       }

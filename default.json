@@ -13,7 +13,8 @@
             "^\\.renovaterc$"
          ],
          "matchStrings": [
-            "\"github>(?<depName>(?<packageName>[^/:# \\n]+/[^/:# \\n]+)[^#() \\n]*)#(?<currentValue>[^\" \\n\\(]+)"
+            "\"github>(?<depName>(?<packageName>[^/:# \\n]+/[^/:# \\n]+)[^#() \\n]*)#(?<currentValue>[^\" \\n\\(]+)",
+            "'github>(?<depName>(?<packageName>[^/:# \\n]+/[^/:# \\n]+)[^#() \\n]*)#(?<currentValue>[^\" \\n\\(]+)"
          ]
       },
       {

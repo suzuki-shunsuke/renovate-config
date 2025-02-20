@@ -1,7 +1,7 @@
 {
    "packageRules": [
       {
-         "allowedVersions": "<= 20.0",
+         "allowedVersions": "<= 20",
          "groupName": "Node.js",
          "matchPackageNames": [
             "node",

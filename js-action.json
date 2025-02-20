@@ -2,9 +2,11 @@
    "packageRules": [
       {
          "allowedVersions": "<= 20.0",
+         "groupName": "Node.js",
          "matchPackageNames": [
             "node",
-            "nodejs/node"
+            "nodejs/node",
+            "@types/node"
          ]
       }
    ]

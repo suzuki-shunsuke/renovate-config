@@ -1,0 +1,11 @@
+{
+   "packageRules": [
+      {
+         "allowedVersions": "<= 20.0",
+         "matchPackageNames": [
+            "node",
+            "nodejs/node"
+         ]
+      }
+   ]
+}

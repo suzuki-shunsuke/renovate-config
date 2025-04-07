@@ -36,6 +36,7 @@
    "major": {
       "automerge": false
    },
+   "minimumReleaseAge": "3 days",
    "packageRules": [
       {
          "matchDepTypes": [

@@ -1,6 +1,6 @@
 {
   extends: [
-    "github>suzuki-shunsuke/renovate-config",
+    "github>suzuki-shunsuke/renovate-config#3.2.0",
     "github>aquaproj/aqua-renovate-config#2.7.5"
   ],
 }

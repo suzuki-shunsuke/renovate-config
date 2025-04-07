@@ -13,6 +13,7 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
     enabled: true,
   },
   configMigration: true,
+  minimumReleaseAge: '3 days',
 } + automerge + {
   packageRules: slsaGitHubGenerator.packageRules + actionSemver.packageRules + disableDigest.packageRules + [
     {

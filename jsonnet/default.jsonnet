@@ -1,7 +1,6 @@
 local actionSemver = import 'action-semver.jsonnet';
 local automerge = import 'automerge.jsonnet';
 local disableDigest = import 'disable-digest.jsonnet';
-local renovatePreset = import 'renovate-preset.jsonnet';
 local slsaGitHubGenerator = import 'slsa-github-generator.jsonnet';
 local yamlLangServer = import 'yaml-language-server.jsonnet';
 
@@ -29,5 +28,5 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
       groupName: 'suzuki-shunsuke/renovate-config',
     },
   ],
-  customManagers: renovatePreset.customManagers + yamlLangServer.customManagers,
+  customManagers: yamlLangServer.customManagers,
 }

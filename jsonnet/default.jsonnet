@@ -13,7 +13,6 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
     enabled: true,
   },
   configMigration: true,
-  minimumReleaseAge: '3 days',
 } + automerge + {
   packageRules: slsaGitHubGenerator.packageRules + actionSemver.packageRules + disableDigest.packageRules + [
     {
@@ -27,6 +26,16 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
     {
       matchPackageNames: ['suzuki-shunsuke/renovate-config'],
       groupName: 'suzuki-shunsuke/renovate-config',
+    },
+    {
+      matchPackageNames: [
+        '!/^suzuki-shunsuke//',
+        '!/^aquaproj//',
+        '!/^lintnet//',
+        '!/^lintnet-modules//',
+        '!/^securefix-action//',
+      ],
+      minimumReleaseAge: '3 days',
     },
   ],
   customManagers: renovatePreset.customManagers + yamlLangServer.customManagers,

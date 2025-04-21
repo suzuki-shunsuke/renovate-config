@@ -29,11 +29,11 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
     },
     {
       matchPackageNames: [
-        '!/^suzuki-shunsuke\//',
-        '!/^aquaproj\//',
-        '!/^lintnet\//',
-        '!/^lintnet-modules\//',
-        '!/^securefix-action\//',
+        '!/^suzuki-shunsuke//',
+        '!/^aquaproj//',
+        '!/^lintnet//',
+        '!/^lintnet-modules//',
+        '!/^securefix-action//',
       ],
       minimumReleaseAge: '3 days',
     },

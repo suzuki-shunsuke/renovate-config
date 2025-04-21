@@ -36,7 +36,6 @@
    "major": {
       "automerge": false
    },
-   "minimumReleaseAge": "3 days",
    "packageRules": [
       {
          "matchDepTypes": [
@@ -72,6 +71,16 @@
          "matchPackageNames": [
             "suzuki-shunsuke/renovate-config"
          ]
+      },
+      {
+         "matchPackageNames": [
+            "!/^suzuki-shunsuke//",
+            "!/^aquaproj//",
+            "!/^lintnet//",
+            "!/^lintnet-modules//",
+            "!/^securefix-action//"
+         ],
+         "minimumReleaseAge": "3 days"
       }
    ],
    "platformAutomerge": true

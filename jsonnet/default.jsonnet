@@ -34,6 +34,7 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
         '!/^lintnet//',
         '!/^lintnet-modules//',
         '!/^securefix-action//',
+        '!/^csm-actions//',
       ],
       minimumReleaseAge: '3 days',
     },

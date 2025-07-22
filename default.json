@@ -78,7 +78,8 @@
             "!/^aquaproj//",
             "!/^lintnet//",
             "!/^lintnet-modules//",
-            "!/^securefix-action//"
+            "!/^securefix-action//",
+            "!/^csm-actions//"
          ],
          "minimumReleaseAge": "3 days"
       }

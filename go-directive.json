@@ -1,0 +1,16 @@
+{
+   "packageRules": [
+      {
+         "matchDepNames": [
+            "go"
+         ],
+         "matchDepTypes": [
+            "golang"
+         ],
+         "matchManagers": [
+            "gomod"
+         ],
+         "rangeStrategy": "bump"
+      }
+   ]
+}

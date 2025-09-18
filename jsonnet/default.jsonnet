@@ -35,6 +35,11 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
         '!/^lintnet-modules//',
         '!/^securefix-action//',
         '!/^csm-actions//',
+        // Go modules
+        '!/^github\\.com/suzuki-shunsuke//',
+        '!/^github\\.com/aquaproj//',
+        '!/^github\\.com/lintnet//',
+        '!/^github\\.com/lintnet-modules//',
       ],
       minimumReleaseAge: '3 days',
     },

@@ -79,7 +79,11 @@
             "!/^lintnet//",
             "!/^lintnet-modules//",
             "!/^securefix-action//",
-            "!/^csm-actions//"
+            "!/^csm-actions//",
+            "!/^github\\.com/suzuki-shunsuke//",
+            "!/^github\\.com/aquaproj//",
+            "!/^github\\.com/lintnet//",
+            "!/^github\\.com/lintnet-modules//"
          ],
          "minimumReleaseAge": "3 days"
       }

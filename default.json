@@ -73,6 +73,12 @@
          ]
       },
       {
+         "automerge": true,
+         "matchPackageNames": [
+            "github.com/google/go-github/*"
+         ]
+      },
+      {
          "matchPackageNames": [
             "!/^suzuki-shunsuke//",
             "!/^aquaproj//",

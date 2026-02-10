@@ -1,0 +1,95 @@
+/*
+Embed PR related metadata to PR Body
+https://docs.renovatebot.com/configuration-options/#prbodynotes
+https://docs.renovatebot.com/templates/
+*/
+
+local fields = [
+  'categories',
+  'currentValue',
+  'currentVersion',
+  'currentVersionAgeInDays',
+  'currentVersionTimestamp',
+  'currentDigest',
+  'currentDigestShort',
+  'datasource',
+  'depName',
+  'depNameLinked',
+  'depNameSanitized',
+  'depType',
+  'depTypes',
+  'displayFrom',
+  'displayPending',
+  'displayTo',
+  'hasReleaseNotes',
+  'indentation',
+  'isGroup',
+  'isLockfileUpdate',
+  'isMajor',
+  'isMinor',
+  'isPatch',
+  'isPin',
+  'isPinDigest',
+  'isRollback',
+  'isReplacement',
+  'isRange',
+  'isSingleVersion',
+  'isVulnerabilityAlert',
+  'logJSON',
+  'manager',
+  'newDigest',
+  'newDigestShort',
+  'newMajor',
+  'newMinor',
+  'newPatch',
+  'newName',
+  'newNameLinked',
+  'newValue',
+  'newVersion',
+  'newVersionAgeInDays',
+  'major',
+  'minor',
+  'patch',
+  'packageFile',
+  'packageFileDir',
+  'packageName',
+  'packageScope',
+  'parentDir',
+  'parentOrg',
+  'platform',
+  'prettyDepType',
+  'prettyNewMajor',
+  'prettyNewVersion',
+  'project',
+  'recreateClosed',
+  'references',
+  'releases',
+  'releaseNotes',
+  'releaseTimestamp',
+  'repository',
+  'semanticPrefix',
+  'sourceRepo',
+  'sourceRepoName',
+  'sourceRepoOrg',
+  'sourceRepoSlug',
+  'sourceUrl',
+  'topLevelOrg',
+  'updateType',
+  'upgrades',
+  'url',
+  'version',
+  'versioning',
+  'versions',
+  'vulnerabilitySeverity',
+];
+
+// '<!-- metadata { "categories": {{{toJSON categories}}}, "currentValue": {{{toJSON currentValue}}} } -->'
+'<!-- metadata { ' +
+std.join(
+  ', ',
+  [
+    '"' + f + '": {{{toJSON ' + f + '}}}'
+    for f in fields
+  ]
+) +
+' } -->'

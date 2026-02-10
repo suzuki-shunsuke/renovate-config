@@ -28,6 +28,10 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
       groupName: 'suzuki-shunsuke/renovate-config',
     },
     {
+      matchPackageNames: ['github.com/google/go-github/*'],
+      automerge: true,
+    },
+    {
       matchPackageNames: [
         '!/^suzuki-shunsuke//',
         '!/^aquaproj//',

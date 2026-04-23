@@ -1,6 +1,7 @@
 local actionSemver = import 'action-semver.jsonnet';
 local automerge = import 'automerge.jsonnet';
 local disableDigest = import 'disable-digest.jsonnet';
+local metadataPRHeader = import 'metadata-pr-header.jsonnet';
 local slsaGitHubGenerator = import 'slsa-github-generator.jsonnet';
 local yamlLangServer = import 'yaml-language-server.jsonnet';
 
@@ -12,7 +13,7 @@ local yamlLangServer = import 'yaml-language-server.jsonnet';
     enabled: true,
   },
   configMigration: true,
-} + automerge + {
+} + automerge + metadataPRHeader + {
   packageRules: slsaGitHubGenerator.packageRules + actionSemver.packageRules + disableDigest.packageRules + [
     {
       matchDatasources: [

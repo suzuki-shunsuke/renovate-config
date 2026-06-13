@@ -2,9 +2,9 @@
   customManagers: [
     {
       customType: 'regex',
-      fileMatch: [
-        '^\\.github/workflows/.*\\.ya?ml$',
-        '^\\.github/actions/.*\\.ya?ml$',
+      managerFilePatterns: [
+        '/^\\.github/workflows/.*\\.ya?ml$/',
+        '/^\\.github/actions/.*\\.ya?ml$/',
       ],
       depNameTemplate: 'golang/go',
       datasourceTemplate: 'github-tags',

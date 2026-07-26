@@ -65,6 +65,12 @@
          ]
       },
       {
+         "allowedVersions": "<= 6",
+         "matchPackageNames": [
+            "typescript"
+         ]
+      },
+      {
          "matchPackageNames": [
             "!/^suzuki-shunsuke//",
             "!/^aquaproj//",

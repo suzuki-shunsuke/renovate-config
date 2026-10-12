@@ -14,3 +14,4 @@ jobs:
     uses: ./.github/workflows/workflow_call_pull_request.yaml
     permissions:
       contents: read
+      pull-requests: read
